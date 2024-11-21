@@ -9,7 +9,7 @@ from dpgenius.default_layout import DefaultLayout
 class DefaultViewport:
     layout: DefaultLayout
 
-    def start(self) -> None:
+    def setup(self):
         dpg.create_context()
         dpg.setup_dearpygui()
 
@@ -18,6 +18,8 @@ class DefaultViewport:
 
         dpg.configure_app(docking=True, docking_space=True)
         dpg.show_viewport()
+
+    def start(self) -> None:
         dpg.start_dearpygui()
         dpg.destroy_context()
 

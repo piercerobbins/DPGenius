@@ -1,15 +1,15 @@
-from dpgenius import DefaultViewport, DefaultLayout, DefaultColumn, DefaultWindow
+import pytest
+import dearpygui.dearpygui as dpg
+from dpgenius import DefaultConfig, DefaultViewport
+from test.test_fixtures import test_layout
 
-if __name__ == '__main__':
-    class TestWindow1(DefaultWindow):
-        def __init__(self):
-            super().__init__('Test Window 1')
 
-        def populate(self):
-            pass
-
-    test_column_1 = DefaultColumn(width_percent=1,
-                                  windows=[(TestWindow1(), 1)])
-    test_layout = DefaultLayout(columns=[test_column_1])
+@pytest.mark.parametrize(('columns', 'windows'), [(i, i) for i in range(1, 5)])
+def test_app_setup(test_layout, columns, windows):
+    DefaultConfig.app_name = 'Test App Setup'
     viewport = DefaultViewport(test_layout)
-    viewport.start()
+    viewport.setup()
+    for column in test_layout.columns:
+        for test_window in column.windows:
+            assert dpg.get_item_label(test_window[0].tag) == test_window[0].label
+    dpg.destroy_context()
