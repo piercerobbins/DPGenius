@@ -6,3 +6,7 @@ __pycache__
 # IDE
 .idea
 .DS_Store
+
+# pacakge
+*.egg-info
+dist

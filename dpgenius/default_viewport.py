@@ -1,8 +1,8 @@
 import dearpygui.dearpygui as dpg
 from screeninfo import get_monitors
 from dataclasses import dataclass
-from dk_label_studio.dpg_template.default_config import DefaultConfig
-from dk_label_studio.dpg_template.default_layout import DefaultLayout
+from dpgenius.default_config import DefaultConfig
+from dpgenius.default_layout import DefaultLayout
 
 
 @dataclass

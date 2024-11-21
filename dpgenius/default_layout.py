@@ -1,7 +1,7 @@
 import dearpygui.dearpygui as dpg
 from dataclasses import dataclass
-from dk_label_studio.dpg_template.default_window import DefaultWindow
-from dk_label_studio.dpg_template.default_config import DPGBounds
+from dpgenius.default_window import DefaultWindow
+from dpgenius.default_config import DPGBounds
 
 
 @dataclass

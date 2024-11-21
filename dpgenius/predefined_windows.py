@@ -1,5 +1,5 @@
 import dearpygui.dearpygui as dpg
-from dk_label_studio.dpg_template.default_window import DefaultWindow
+from dpgenius.default_window import DefaultWindow
 
 
 class TitleWindow(DefaultWindow):

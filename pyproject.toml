@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dpgenius"
+version = "0.0.1"
+description = "A Simple DearPyGui Template"
+requires-python = ">=3.12"
+authors = [
+    { name = "Pierce Robbins", email = "piercearobbins@gmail.com" }
+]
+dependencies = [
+    "dearpygui",
+    "screeninfo"
+]
+
+
+[tool.setuptools.packages.find]
+where = ["."]

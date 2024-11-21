@@ -2,7 +2,7 @@ import re
 import dearpygui.dearpygui as dpg
 from abc import ABC, abstractmethod
 from typing import Callable
-from dk_label_studio.dpg_template.default_config import DefaultConfig, DPGBounds
+from dpgenius.default_config import DefaultConfig, DPGBounds
 
 
 class WindowPriority:
